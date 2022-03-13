@@ -49,7 +49,8 @@ const repeatX = (x)=>{
 
 //bubbleSortAnim(arr, 1)
 
-const anim2 = (arr)  => {
+const animateBubble = (arr, speed = 1)  => {
+  container.innerHTML=""
   let count = 1;
   let i = 0;
   arr.forEach(num=> {
@@ -57,6 +58,7 @@ const anim2 = (arr)  => {
   el.setAttribute('style', `height:${num*10}px; width:20px; background-color: #39d`)
   container.appendChild(el)
   })
+  outerLoopCount.innerText = "outerloop: "+(i+1);
   const swap = (j) => {
     
     if(j < arr.length){
@@ -74,22 +76,22 @@ const anim2 = (arr)  => {
           container.replaceChild(c, b)
           container.replaceChild(b, a)
         }
-      },500 )
+      },250*speed )
       setTimeout(() => {
         let els = document.querySelectorAll('#container div');
         els.forEach(el => {
          el.style.border = 'none'
         })
         swap(j)
-      },1000)
+      },500*speed)
     }else{
-      ++i
-       outerLoopCount.innerText = i+1;
+      i++
       if (i < arr.length) {
+        outerLoopCount.innerText = "outerloop: "+(i+1);
           swap(1)
       }
     }
   }
   swap(1)
 }
-anim2(arr)
+animateBubble(arr, 0.1)
