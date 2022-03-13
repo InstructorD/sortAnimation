@@ -18,21 +18,32 @@
   #container1 div, #container2 div{
     margin: 0 2px;
   }
+  #bub,#sel{
+    border: 2px solid;
+    padding:10px;
+  }
   </style>
   
 </head>
 
 <body>
-  <div id="outerLoopCount1"></div>
+  <div id="bub">
+      <div id="outerLoopCount1"></div>
   <div id="innerLoopCount1"></div>
   <div id="count1"></div>
   <div id="container1"></div>
   <div>animateBubble(<i>array, </i><i>speed multiplyer</i>)</div>
   <div>example: animateBubble([9,8,7,6,5,4,3,2,1], 0.1)</div>
-    <div id="outerLoopCount2"></div>
+  </div>
+<div id="sel">
+   <div id="outerLoopCount2"></div>
   <div id="innerLoopCount2"></div>
   <div id="count2"></div>
   <div id="container2"></div>
+  <div>animateSelection(<i>array, </i><i>speed multiplyer</i>)</div>
+  <div>example: animateSelection([9,8,7,6,5,4,3,2,1], 0.1)</div>
+</div>
+   
 </body>
 <script src="main.js"></script>
 </html>
