@@ -11,11 +11,11 @@
     padding:0;
     box-sizing: border-box;
   }
-  #container{
+  #container1, #container2{
     display: flex;
     align-items: baseline;
   }
-  #container div{
+  #container1 div, #container2 div{
     margin: 0 2px;
   }
   </style>
@@ -23,12 +23,16 @@
 </head>
 
 <body>
-  <div id="outerLoopCount"></div>
-  <div id="innerLoopCount"></div>
-  <div id="count"></div>
-  <div id="container"></div>
+  <div id="outerLoopCount1"></div>
+  <div id="innerLoopCount1"></div>
+  <div id="count1"></div>
+  <div id="container1"></div>
   <div>animateBubble(<i>array, </i><i>speed multiplyer</i>)</div>
   <div>example: animateBubble([9,8,7,6,5,4,3,2,1], 0.1)</div>
+    <div id="outerLoopCount2"></div>
+  <div id="innerLoopCount2"></div>
+  <div id="count2"></div>
+  <div id="container2"></div>
 </body>
 <script src="main.js"></script>
 </html>
